@@ -1,0 +1,40 @@
+[
+    {
+      "title": "First Blog Post",
+      "description": "This is the description for the first blog post. Lorem ipsum dolor sit amet.",
+      "date": "2022-08-01",
+      "imageSrc": "./../public/img/one.png"
+    },
+    {
+      "title": "Second Blog Post",
+      "description": "This is the description for the second blog post. consectetur adipiscing elit.",
+      "date": "2022-08-05",
+      "imageSrc": "./../public/img/one.png"
+    },
+    {
+      "title": "First Blog Post",
+      "description": "This is the description for the first blog post. Lorem ipsum dolor sit amet.",
+      "date": "2022-08-01",
+      "imageSrc": "./../public/img/one.png"
+    },
+    {
+      "title": "Second Blog Post",
+      "description": "This is the description for the second blog post. consectetur adipiscing elit.",
+      "date": "2022-08-05",
+      "imageSrc": "./../public/img/one.png"
+    },
+    {
+      "title": "First Blog Post",
+      "description": "This is the description for the first blog post. Lorem ipsum dolor sit amet.",
+      "date": "2022-08-01",
+      "imageSrc": "./../public/img/one.png"
+    },
+    {
+      "title": "Second Blog Post",
+      "description": "This is the description for the second blog post. consectetur adipiscing elit.",
+      "date": "2022-08-05",
+      "imageSrc": "./../public/img/one.png"
+    }
+
+  ]
+  
