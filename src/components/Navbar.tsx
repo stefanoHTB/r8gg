@@ -1,31 +1,89 @@
-import ToggleColor from "./ToggleColor";
+import { Link } from "react-router-dom";
+import UISwitch from "./UISwitch";
+import { useEffect, useRef, useState } from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const Navbar = () => {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  const [isDivClicked, setDivClicked] = useState(false);
+
+  const handleDivClick = () => {
+    setDivClicked(!isDivClicked);
+  };
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      if (
+        isMobileMenuOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        closeMobileMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, [isMobileMenuOpen]);
+
   return (
-    <nav className="bg-gray-300 dark:bg-black p-3 fixed w-full top-0 shadow-md">
+    <nav className="bg-white dark:bg-stone-950 p-3 fixed w-full top-0 shadow-md border-b dark:border-stone-900">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="flex items-center">
-          <img src="/public/logoob.png" alt="Logo" className="h-11 w-11 mr-2" />
-          <div className="text-white font-bold text-xl">/ R8gg</div>
+        <div className="flex items-center w-full justify-center md:w-auto">
+          <img
+            src="/public/img/beau.png"
+            alt="Logo"
+            className="h-13 w-11 mr-2"
+          />
+          <Link to={"/"} onClick={closeMobileMenu}>
+            <div className="text-black dark:text-white text-2xl font-mono font-bold">
+              R8GG
+            </div>
+          </Link>
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <a href="/" className="text-white">
-            Home
-          </a>
-          <a href="/about" className="text-white">
-            About
-          </a>
-          <a href="/links" className="text-white">
-            Links
-          </a>
+          <Link to={"/"}>
+            <h5 className="text-black dark:text-white font-bold">Home</h5>
+          </Link>
+          <Link to={"/about"}>
+            <h5 className="ext-black dark:text-white font-bold">About</h5>{" "}
+          </Link>
+          <Link to={"/links"}>
+            <h5 className="ext-black dark:text-white font-bold">Links</h5>{" "}
+          </Link>
         </div>
-        <div>
-          <ToggleColor />
+        <div className="hidden md:flex  items-center">
+          {/* GitHub button with a div inside */}
+          <UISwitch />
+          <div
+            className="p-2 cursor-pointer border border-blue-500 bg-gray-100 dark:bg-black rounded-2xl	 transition duration-300 hover:bg-gray-200 dark:hover:bg-gray-800"
+            onClick={handleDivClick}
+          >
+            <a href="https://github.com/stefanoHTB/shopify-community-projects">
+              <GitHubIcon style={{ fontSize: 25 }} color="info" />
+            </a>
+          </div>
         </div>
 
         <div className="md:hidden">
-          <button className="text-white">
+          <button
+            className="text-black dark:text-white"
+            onClick={toggleMobileMenu}
+          >
             <svg
               fill="none"
               strokeLinecap="round"
@@ -38,6 +96,36 @@ const Navbar = () => {
               <path d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
+
+          {/* Mobile menu */}
+          {isMobileMenuOpen && (
+            <div
+              ref={mobileMenuRef}
+              className="fixed top-16 left-0 bottom-0 right-0 bg-white dark:bg-stone-950 border-t border-gray-300 dark:border-gray-700 flex flex-col "
+            >
+              <Link
+                to={"/"}
+                onClick={closeMobileMenu}
+                className="py-2 px-4 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-stone-900 border-b border-gray-300 dark:border-gray-700"
+              >
+                Home
+              </Link>
+              <Link
+                to={"/about"}
+                onClick={closeMobileMenu}
+                className="py-2 px-4 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-stone-900 border-b border-gray-300 dark:border-gray-700"
+              >
+                About
+              </Link>
+              <Link
+                to={"/links"}
+                onClick={closeMobileMenu}
+                className="py-2 px-4 text-black dark:text-white hover:bg-gray-100 dark:hover:bg-stone-900  border-b border-gray-300 dark:border-gray-700 "
+              >
+                Links
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </nav>
