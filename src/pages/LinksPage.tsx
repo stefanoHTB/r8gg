@@ -10,7 +10,7 @@ const LinksPage = () => {
   });
   return (
     <div className="container mx-auto p-8 bg-white dark:bg-stone-950 shadow-md">
-      <ProfileCard imageSrc={"/glasses.png"} title={"@stephanodev"} />
+      <ProfileCard imageSrc={"/img/002/ner.png"} title={"@stephanodev"} />
 
       <div className="flex flex-col space-y-4">
         {/* YouTube Link */}

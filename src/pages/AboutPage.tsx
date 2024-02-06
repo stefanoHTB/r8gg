@@ -18,7 +18,7 @@ const AboutPage = () => {
           post={{
             title: "",
             description: "",
-            imageSrc: "/img/website/team.jpeg",
+            imageSrc: "/img/002/002.png",
           }}
         />
 
