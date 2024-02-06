@@ -6,6 +6,11 @@ import BlogPage from "./pages/BlogPage";
 import LinksPage from "./pages/LinksPage";
 import AboutPage from "./pages/AboutPage";
 
+import ReactGA from "react-ga";
+
+const TRACKING_ID = "G-RERJSP9M7P";
+ReactGA.initialize(TRACKING_ID);
+
 function App() {
   return (
     <Routes>

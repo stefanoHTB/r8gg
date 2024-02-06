@@ -43,11 +43,7 @@ const Navbar = () => {
     <nav className="bg-white dark:bg-stone-950 p-3 fixed w-full top-0 shadow-md border-b dark:border-stone-900">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center w-full justify-center md:w-auto">
-          <img
-            src="/public/img/beau.png"
-            alt="Logo"
-            className="h-13 w-11 mr-2"
-          />
+          <img src="/img/beau.png" alt="Logo" className="h-13 w-11 mr-2" />
           <Link to={"/"} onClick={closeMobileMenu}>
             <div className="text-black dark:text-white text-2xl font-mono font-bold">
               R8GG

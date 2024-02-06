@@ -4,9 +4,11 @@ import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import Message from "../components/Message";
 import { useEffect } from "react";
+import ReactGA from "react-ga";
 
 const HomePage = () => {
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
   return (

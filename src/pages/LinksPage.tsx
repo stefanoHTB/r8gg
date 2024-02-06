@@ -1,17 +1,16 @@
 import { useEffect } from "react";
 import Message from "../components/Message";
 import ProfileCard from "../components/Profile";
+import ReactGA from "react-ga";
 
 const LinksPage = () => {
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
   return (
     <div className="container mx-auto p-8 bg-white dark:bg-stone-950 shadow-md">
-      <ProfileCard
-        imageSrc={"./../../public/glasses.png"}
-        title={"@stephanodev"}
-      />
+      <ProfileCard imageSrc={"/glasses.png"} title={"@stephanodev"} />
 
       <div className="flex flex-col space-y-4">
         {/* YouTube Link */}

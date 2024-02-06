@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import blogs from "../blogs.json"; // Import the fake data
 import { useEffect } from "react";
+import ReactGA from "react-ga";
 
 const BlogPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -8,6 +9,7 @@ const BlogPage = () => {
   const blog = blogs[index];
 
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 

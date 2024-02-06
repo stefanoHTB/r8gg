@@ -4,24 +4,24 @@
       "title": "Mastering Your Shopify Store with the Shopify CLI: A Comprehensive Guide",
       "description": "In this guide, we'll explore the Shopify CLI and delve into its commands to help you supercharge your Shopify store management.",
       "date": "2022-08-01",
-      "imageSrc": "/public/img/cli.png",
+      "imageSrc": "/img/cli.png",
       "paragraphs": [
         {
-          "image": "/public/img/001/1.png",
+          "image": "/img/001/1.png",
           "content": "Shopify CLI empowers developers with a suite of commands tailored for streamlined app development and store management. Organized into four main categories – app configurations, authentication, theme management, and CLI settings – the CLI offers a comprehensive toolkit to enhance your Shopify experience. In the realm of general commands, functionalities like shopify search facilitate effortless navigation on the Shopify website, while shopify version and shopify upgrade ensure you stay up-to-date with the latest CLI enhancements. The shopify commands and shopify help commands act as invaluable resources, providing a quick reference to the complete command list and CLI menu. Let's delve into each category to harness the full potential of the Shopify CLI."
         },
         {
-          "image": "/public/img/001/2.png",
+          "image": "/img/001/2.png",
 
           "content": "The Shopify CLI's app configuration commands are a versatile toolkit designed to streamline the development and management of Shopify apps. Kickstarting your project is as simple as running npm init @shopify/app@latest, initializing a new Shopify app with Remix. During development, utilize npm run dev to test your app locally, and npm run build when preparing for production deployment. For a clean slate during development, npm run dev -- -- reset reinstalls your app into the Shopify dashboard. Customizing your app's behavior is made easy with npm run shopify app config, enabling changes to scope configurations. Testing webhooks becomes seamless with npm run shopify webhook trigger. When ready for deployment, npm run deploy simplifies the process, and npm run release officially releases a new version. Additionally, npm run shopify app config link facilitates pulling configurations from Shopify partners into your app, ensuring alignment. These commands collectively empower developers throughout the app development lifecycle."
         },
         {
-          "image": "/public/img/001/3.png",
+          "image": "/img/001/3.png",
 
           "content": "The Shopify CLI Theme Development commands empower developers to seamlessly manage and enhance their Shopify themes. Shopify theme info provides detailed insights into the current theme, aiding in effective theme management. By running shopify theme dev, developers initialize a development server within the theme, streamlining the testing and debugging process. The shopify theme pull command facilitates the efficient transfer of a live theme from the online store to the local development environment. Subsequently, shopify theme push enables developers to effortlessly deploy changes to the live theme. For initiating new theme development, shopify theme init conveniently pulls the Shopify Dawn theme from GitHub. Finally, the shopify theme publish command marks the culmination by making the theme live on the online store. This suite of commands ensures a smooth and organized workflow for Shopify theme development, enhancing the overall development experience."
         },
         {
-          "image": "/public/img/001/4.png",
+          "image": "/img/001/4.png",
 
           "content": "The final set of commands in the Shopify CLI empowers users with general configuration and functionality enhancements. With shopify config autocorrect status, users can efficiently check the current status of autocorrect in the CLI. Enabling autocorrect is effortless with shopify config autocorrect on, as it activates a helpful feature allowing the CLI to assist in correcting typos within commands. Conversely, shopify config autocorrect off provides the flexibility to turn off autocorrect, catering to users who prefer to manage typos independently. These commands ensure that users can tailor their CLI experience to align with their preferences, offering a seamless and user-friendly development environment."
         },
@@ -36,7 +36,7 @@
       "title": "Welcome to R8GG, Your Ultimate Shopify App Development Hub",
       "description": "This is the description for the second blog post. consectetur adipiscing elit.",
       "date": "2022-08-05",
-      "imageSrc": "/public/img/002/002.png",
+      "imageSrc": "/img/002/002.png",
       "paragraphs": [
         {
           "content": "Welcome to R8gg, your dedicated space in the vast realm of Shopify app development! At R8gg, we're on a mission to foster a vibrant and interconnected community of Shopify app developers, united by a shared passion for innovation and excellence. Whether you're a seasoned developer seeking advanced insights or a newcomer eager to embark on the exciting journey of app creation, R8gg is here to be your go-to resource."
@@ -59,4 +59,6 @@
       ]
     }
   ]
+
+  
   

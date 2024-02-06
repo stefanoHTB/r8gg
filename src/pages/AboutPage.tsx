@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import FeaturedPost from "../components/FeaturePost";
+import ReactGA from "react-ga";
 
 const AboutPage = () => {
   useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
   return (
@@ -16,7 +18,7 @@ const AboutPage = () => {
           post={{
             title: "",
             description: "",
-            imageSrc: "../../public/img/website/team.jpeg",
+            imageSrc: "/img/website/team.jpeg",
           }}
         />
 
